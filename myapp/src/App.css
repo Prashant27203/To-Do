@@ -1,38 +1,85 @@
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add-task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.add-task input {
+  padding: 5px;
+  margin-right: 10px;
+  width: 60%;
+}
+
+.list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.task {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 5px;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeInUp 0.5s ease;
 }
 
-@keyframes App-logo-spin {
+@keyframes fadeInUp {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
+
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+/* App.css */
+/* ... other styles ... */
+
+.task {
+  /* ... existing styles ... */
+  transition: background-color 0.3s ease;
+}
+
+.task.completed {
+  background-color: #f0f0f0;
+  color: green;
 }
